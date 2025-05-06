@@ -1,136 +1,365 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Présentation - Portfolio BTS SIO</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio de Aleksandar Nikolic, étudiant en BTS SIO spécialisé dans la cybersécurité et l'infrastructure réseaux.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Aleksandar Nikolic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg-color: #2c3e50;
+            --text-color: #ecf0f1;
+            --accent-color: #e74c3c;
+            --secondary-color: #34495e;
+            --light-bg-color: #f5f7fa;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--light-bg-color);
+            color: #333;
+        }
+
+        header {
+            background-color: var(--main-bg-color);
+            color: var(--text-color);
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: var(--text-color);
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        h3, h4 {
+            color: var(--secondary-color);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--main-bg-color);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 500px;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background-color: var(--main-bg-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+    }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            iframe {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+  
+        section#old-tech .card p {
+            margin-bottom: 0.5rem; 
+        }
+
+        section#old-tech .card a {
+            margin-top: 0.2rem; 
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>Mon Portfolio BTS SIO</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Présentation</a></li>
-        <li><a href="entreprise.html">Entreprise</a></li>
-        <li><a href="projet-e5.html">Projet E5</a></li>
-        <li><a href="projet-e6.html">Projet E6</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Présentation</h2>
-    <p>Je suis étudiant en BTS SIO SISR passionné par l’administration des systèmes et réseaux.</p>
-  </main>
+    <header>
+        <h1>
+            <img src="documents/logo.png" alt="Logo Aleksandar Nikolic">
+            Bienvenue sur mon Portfolio
+        </h1>
+        <nav>
+            <a href="#e5">E5</a>
+            <a href="#old-tech">Veille technologique</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#e6">E6</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <section id="e5">
+        
+           <h2>BTS SIO option SISR</h2>
+        
+            <h3>E5 - Situations</h3>
+            <div class="container">
+                <div class="card">
+                    <h4>Configuration et sécurisation d'un réseau LAN</h4>
+                    <p>Configuration de routeurs et switchs pour assurer une connectivité fiable et sécurisée.</p>
+                    <a href="documents/Fiche e4 Conf et secu LAN.pdf" target="_blank">Fiche E5</a><br>
+                </div>
+                <div class="card">
+                    <h4>Installation et configuration d’un serveur FTP sécurisé</h4>
+                    <p>Mise en place d’un serveur FTP avec des règles de sécurité.</p>
+                    <a href="documents/Fiche e4 Conf et instal FTP.pdf" target="_blank">Fiche E5</a><br>
+                </div>
+                <div class="card">
+                    <h4>Réalisation d’un inventaire des équipements réseau</h4>
+                    <p>Réaliser un inventaire des équipements réseau pour optimiser et facilité la gestion des stocks.</p>
+                    <a href="documents/Fiche e4 Inventaire.pdf" target="_blank">Fiche E5</a><br>
+                </div>
+                <div class="card">
+                    <h4>Création et gestion d’une machine virtuelle</h4>
+                    <p>Installer un hyperviseur et configurer une VM pour un serveur ou un poste de travail.</p>
+                    <a href="documents/Fiche e4 Install et Gestion VM.pdf" target="_blank">Fiche E5</a><br>
+                </div>
+                <div class="card">
+                    <h4>Mise en place d'un VPN sur un serveur Synology</h4>
+                    <p>Mise en place d’un accès distant sécurisé pour facilité l'accès aux ressources internes.</p>
+                    <a href="documents/Fiche e4 VPN.pdf" target="_blank">Fiche E5</a><br>
+                </div>
+                  <div class="card">
+                    <h4>Permissions de dossier sous Linux</h4>
+                    <p>Mise en place d'utilisareur ayant des permissions spécifique pour accéder qu'a certains dossier.</p>
+                    <a href="documents/Fiche e5 Permissions dossier Linux.pdf" target="_blank">Fiche E5</a><br>
+                </div>
+            </div>
+    </section>
 
-  <footer>
-    <p>© 2025 - Portfolio BTS SIO</p>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Entreprise - Portfolio BTS SIO</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Mon Portfolio BTS SIO</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Présentation</a></li>
-        <li><a href="entreprise.html">Entreprise</a></li>
-        <li><a href="projet-e5.html">Projet E5</a></li>
-        <li><a href="projet-e6.html">Projet E6</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+     <section id="old-tech">
+            <h3>Vieilles Technologies</h3>
+            <div class="container">
+                <div class="card">
+                    <h4>La technologies Docker</h4>
+                    <p>J'ai fait ma veille technologique sur une technologie en particulier, souvent utilisée en entreprise, Docker.</p>
+                    <p><a href="https://www.canva.com/design/DAGYDX5xUqY/IcQIialJqtz5mdPiwzDyeg/view?utm_content=DAGYDX5xUqY&utm_campaign=designshare&utm_medium=link&utm_source=editor">PowerPoint</a></p>
+                </div>
+            </div>
+        </section>
+    </section>
 
-  <main>
-    <h2>Entreprise</h2>
-    <p>J’ai réalisé mon stage chez SPHERE FRANCE, spécialisée en solutions informatiques.</p>
-  </main>
+     <section id="certifications">
+    <h2>Certifications</h2>
+    <h4>Voici ce que m'a apporté la réalisation de ces certifications</h4>
+    <p><a href="https://www.canva.com/design/DAGl8hZG7kA/JIHyu2JdUOtvspAZrycAfw/view?utm_content=DAGl8hZG7kA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hae14dc36b1" target="_blank">Voir le PowerPoint</a></p>
+       
+     <div class="container">
+        <div class="card">
+            <h4>Notions de base sur les réseaux <br>(Cisco Networking Academy)</h4>
+            <p>
+                <a href="documents/networking-basics.pdf" target="_blank">Certificate</a><br>
+                <a href="https://www.credly.com/badges/aae1a05c-0dd7-4264-a2f7-2b539fe8f05a/linked_in_profile" target="_blank">Badge</a>
+            </p>
+        </div>
+        <div class="card">
+            <h4>Équipements réseau et Configuration de base <br>(Cisco Networking Academy)</h4>
+            <p>
+                <a href="documents/Networking-devices.pdf" target="_blank">Certificate</a><br>
+                <a href="https://www.credly.com/badges/ac43262c-8bcd-478c-b245-d4baa73e783c/linked_in_profile" target="_blank">Badge</a>
+            </p>
+        </div>
+        <div class="card">
+            <h4>Sécurité des Terminaux <br>(Cisco Networking Academy)</h4>
+            <p>
+                <a href="documents/endpoint-security.pdf" target="_blank">Certificate</a><br>
+                <a href="https://www.credly.com/badges/ed3f0cdb-2d31-4254-85d3-0fdcf83e256c/linked_in_profile" target="_blank">Badge</a>
+            </p>
+        </div>
+        <div class="card">
+            <h4>Introduction à la Cybersécurité <br>(Cisco Networking Academy)</h4>
+            <p>
+                <a href="documents/Introduction_to_Cybersecurity_Badge20231222-29-dbkqcj.pdf" target="_blank">Certificate</a><br>
+                <a href="https://www.credly.com/badges/0c14809e-3932-408f-b3df-08fe4a67a95d/print" target="_blank">Badge</a>
+            </p>
+        </div>
+        <div class="card">
+            <h4>Introduction à la Cybersécurité <br>(TryHackMe)</h4>
+            <p>
+                <a href="documents/THM-U3SZFEBAS8.png" target="_blank">Certificate</a>
+            </p>
+        </div>
+        <div class="card">
+            <h4>Analyste Junior en Cybersécurité <br>(Cisco Networking Academy)</h4>
+            <p>
+                <a href="documents/Junior_Cybersecurity_Analyst_Career_Path_Badge20240311-29-rde1l8.pdf" target="_blank">Certificate</a><br>
+                <a href="https://www.credly.com/badges/63397658-e7bc-4213-82fd-f080ec992376/linked_in_profile" target="_blank">Badge</a>
+            </p>
+        </div>
+    </div>
+</section>
+    
+    <section id="e6">
+            <h3>E6 - Situations</h3>
+            <div class="container">
+                <div class="card">
+                    <h4>Mise en place d’une infrastructure réseau sécurisée</h4>
+                    <p>Objectif : Configurer un réseau local avec des VLAN.</p>
+                    <a href="documents/FICHE E6 2025 Aleksandar VLAN.pdf" target="_blank">Fiche descriptive</a><br>
+                    <a href="documents/test.pdf" target="_blank">Doc technique</a><br>
+                    <a href="documents/test.pdf" target="_blank">Doc utilisateur</a><br>
+                    <a href="documents/test.pdf" target="_blank">Doc test</a><br>
+                </div>
+            </div>
 
-  <footer>
-    <p>© 2025 - Portfolio BTS SIO</p>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Projet E6 - Portfolio BTS SIO</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Mon Portfolio BTS SIO</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Présentation</a></li>
-        <li><a href="entreprise.html">Entreprise</a></li>
-        <li><a href="projet-e5.html">Projet E5</a></li>
-        <li><a href="projet-e6.html">Projet E6</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <br>
 
-  <main>
-    <h2>Projet E6</h2>
-    <p>Mise en place de GLPI avec FusionInventory et automatisation avec Ansible.</p>
-  </main>
+            <div class="container">
+                <div class="card">
+                    <h4>Mise en place d’un contrôleur de domaine sous Windows Server 2022 avec les services AD DS, DHCP, DNS et GPO</h4>
+                    <p>Objectif : Déploiements d'un contrôleur de domaine sous Windows Server 2022 pour gérer les utilisateurs, les groupes et les stratégies de sécurité via AD DS, DHCP, DNS et GPO.</p>
+                    <a href="documents/FICHE E6 2025 Aleksandar AD DS.pdf" target="_blank">Fiche descriptive</a><br>
+                    <a href="documents/test.pdf" target="_blank">Doc technique</a><br>
+                    <a href="documents/test.pdf" target="_blank">Doc utilisateur</a><br>
+                    <a href="documents/test.pdf" target="_blank">Doc test</a><br>
+                </div>
+            </div>
+        
+    </section>
 
-  <footer>
-    <p>© 2025 - Portfolio BTS SIO</p>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Contact - Portfolio BTS SIO</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Mon Portfolio BTS SIO</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Présentation</a></li>
-        <li><a href="entreprise.html">Entreprise</a></li>
-        <li><a href="projet-e5.html">Projet E5</a></li>
-        <li><a href="projet-e6.html">Projet E6</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            Pour toute demande, n'hésitez pas à me contacter à 
+            <a href="mailto:anikolic93190@gmail.com">anikolic93190@gmail.com</a> 
+            <br>ou via LinkedIn : 
+            <a href="https://www.linkedin.com/in/aleksandar-nikolic-a1597b242/" target="_blank">Aleksandar Nikolic</a>
+        </p>
+    </section>
+    
+    <footer>
+        2024-2025 Aleksandar Nikolic
+    </footer>
 
-  <main>
-    <h2>Contact</h2>
-    <p>Email : ton.email@example.com</p>
-    <p>LinkedIn : <a href="#">Mon profil LinkedIn</a></p>
-  </main>
-
-  <footer>
-    <p>© 2025 - Portfolio BTS SIO</p>
-  </footer>
-</body>
-</html>
-<main>
-  <h2>Projet E5</h2>
-  <ul>
-    <li><a href="SURVEY.pdf" target="_blank">📶 Survey Wi-Fi (SAFRAN)</a></li>
-    <li><a href="INVENTAIRE.pdf" target="_blank">📦 Inventaire des équipements</a></li>
-    <li><a href="DHCP_VLAN.pdf" target="_blank">🛠️ Configuration VLAN + DHCP (Securitas)</a></li>
-    <li><a href="ACL.pdf" target="_blank">🔐 Mise en place de règles ACL</a></li>
-    <li><a href="CONFIGURATION_SSH.pdf" target="_blank">🌐 Configuration SSH d’un switch Aruba 6000</a></li>
-    <li><a href="BRASSAGE_DUNE_BAIE.pdf" target="_blank">📡 Brassage d’une baie (Orisha)</a></li>
-  </ul>
-</main>
+    </html>
+    
