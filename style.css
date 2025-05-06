@@ -46,7 +46,7 @@
     margin: auto;
   }
   
-  section {
+  section, main {
     margin-bottom: 40px;
     padding: 20px;
     background-color: white;
